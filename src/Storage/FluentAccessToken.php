@@ -60,10 +60,10 @@ class FluentAccessToken extends FluentAdapter implements AccessTokenInterface
 
     /**
      * Get the scopes for an access token
-     * @param \League\OAuth2\Server\Entity\AbstractTokenEntity $token The access token
+     * @param \League\OAuth2\Server\Entity\AccessTokenEntity $token The access token
      * @return array Array of \League\OAuth2\Server\Entity\ScopeEntity
      */
-    public function getScopes(AbstractTokenEntity $token)
+    public function getScopes(AccessTokenEntity $token)
     {
         $result = $this->getConnection()->table('oauth_access_token_scopes')
                 ->select('oauth_scopes.*')
