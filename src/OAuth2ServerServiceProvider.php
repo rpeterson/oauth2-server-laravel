@@ -17,7 +17,7 @@ use League\OAuth2\Server\Exception\OAuthException;
 use LucaDegasperi\OAuth2Server\Filters\CheckAuthCodeRequestFilter;
 use LucaDegasperi\OAuth2Server\Filters\OAuthFilter;
 use LucaDegasperi\OAuth2Server\Filters\OAuthOwnerFilter;
-use Illuminate\Contracts\Exception\Handler;
+use Illuminate\Contracts\Debug\ExceptionHandler;
 
 class OAuth2ServerServiceProvider extends ServiceProvider
 {
