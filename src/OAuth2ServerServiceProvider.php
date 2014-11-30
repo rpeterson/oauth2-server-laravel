@@ -164,7 +164,7 @@ class OAuth2ServerServiceProvider extends ServiceProvider
      */
     private function registerErrorHandlers(Handler $handler)
     {
-        $handler->error(function(OAuthException $e) {
+        $handler->report(function(OAuthException $e) {
             return new JsonResponse([
                     'error' => $e->errorType,
                     'error_description' => $e->getMessage()
